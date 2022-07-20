@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="screen-orientation" content="portrait">
+
+    <title>AiR - Adventures in Reality</title>
+    <meta name="title" content="AiR - Adventures in Reality">
+    <meta name="description" lang="en" xml:lang="en"
+          content="A Solana based Metaverse adventure closely linked to the real world put into our everyday lives.">
+    <meta name="keywords" lang="en" xml:lang="en"
+          content="AiR, NFT, Metaverse, Opensea, Solana, 元宇宙, Play To Earn, Gamefi, Token">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="3 days">
+    <meta name="theme-color" content="#54C3E7"/>
+    <meta name="msapplication-navbutton-color" content="#54C3E7">
+    <meta name="apple-mobile-web-app-title" content="AiR">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta property="og:url" content="air-world.io">
+    <meta property="og:site_name" content="AiR - Adventures in Reality">
+    <meta property="og:title" content="AiR - Adventures in Reality"/>
+    <meta property="og:description"
+          content="A Solana based Metaverse adventure closely linked to the real world put into our everyday lives."/>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="air-world.io/images/AiR_OG.png">
+    <script type="module">
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+        import {getAnalytics, logEvent} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+
+        var analytics = null;
+
+        function readTextFile(file, callback) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET.html", file, true);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+            }
+            rawFile.send(null);
+        }
+
+        readTextFile("firebase_config.json", function (text) {
+            var data = JSON.parse(text);
+            const app = initializeApp(data);
+            analytics = getAnalytics(app);
+        });
+
+        function log(eventName) {
+            if (analytics) {
+                logEvent(analytics, eventName);
+                console.log("Log running");
+            }
+        }
+
+        window.log = log;
+    </script>
+
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '390651976212987');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=390651976212987&amp;ev=PageView&amp;noscript=1"/>
+    </noscript>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/normalize.css">
+    <link rel="stylesheet" href="scss/main.css">
+
+    <script src="cdnjs/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="cdnjs/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="cdnjs/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" type="text/javascript"></script>
+    <script src="cdnjs/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>
+    <script src="unpkg/%40lottiefiles/lottie-player%401.5.7/dist/lottie-player.js"></script>
+</head>
+<body class="not_perpared">
+<div class="mob_logo">
+    <img src="images/air_logo.png">
+</div>
+<div class="hambuger_wrapper">
+    <div class="hambuger">
+        <img src="images/svg/bars-solid.svg">
+    </div>
+</div>
+<div id="toTop" class="totop">
+    <img src="images/svg/totop.svg">
+</div>
+<section class="menu not_perpared">
+    <div class="menu_bg"></div>
+    <div class="max_width">
+        <div class="logo">
+            <img src="images/air_logo.png">
+            <span>ADVENTURE IN REALITY</span>
+        </div>
+        <nav>
+            <li class="nav_button" data-goto="about">ABOUT</li>
+            <li class="nav_button" data-goto="roadmap">ROADMAP</li>
+            <li class="nav_button" data-goto="experience">AiR EXPERIENCE</li>
+            <li class="nav_button" data-goto="team">TEAM</li>
+            <li class="nav_button" data-goto="faq">FAQ</li>
+            <li class="nav_button" data-goto="community">COMMUNITY</li>
+        </nav>
+    </div>
+</section>
+<section class="intro_section not_perpared">
+    <div class="intro_bg"></div>
+    <div class="max_width">
+
+        <div class="big_title">
+
+            <div class="slogan_en">Adventure<br>in Reality.</div>
+            <div class="slogan_p">A Solana based Metaverse adventure closely linked to the real world put into our
+                everyday lives
+            </div>
+        </div>
+    </div>
+</section>
+<section class="air">
+    <div class="air_bg"><img src="images/air_section_bg.png"></div>
+    <figure><img src="images/air_section_img.png" alt="Adventure in Reality"></figure>
+</section>
+<section id="about" class="about_section">
+    <div class="max_width">
+        <h1>WHAT IS AiR?</h1>
+        <div class="about_list">
+            <div class="about_card card_metaverse parallax_container">
+                <img class="parallax_image" src="images/about01.png">
+                <div class="about_contents">
+                    <h2>Metaverse-to-Go</h2>
+                    <p>Look around yourself online and offline for gateways into the AiR Metaverse everywhere.</p>
+                </div>
+            </div>
+            <div class="about_card card_adventures parallax_container">
+                <img class="parallax_image" src="images/about02.png">
+                <div class="about_contents">
+                    <h2>Adventures</h2>
+                    <p>Hunt for treasure, solve puzzles, level up skills, and battle epic monsters in a fantasy world
+                        built upon the real world.</p>
+                </div>
+            </div>
+            <div class="about_card card_play parallax_container">
+                <img class="parallax_image" src="images/about03.png">
+                <div class="about_contents">
+                    <h2>Play-to-Earn</h2>
+                    <p>Collect virtual game cards to complete missions that earn you decentralized digital assets and
+                        rewards with physical world values.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about_list">
+            <div class="about_card card_citizens parallax_container">
+                <img class="parallax_image" src="images/about05.png">
+                <div class="about_contents">
+                    <h2>AiR Citizens</h2>
+                    <p>NFT characters enabled by AiR can be played as Citizens in the Metaverse, who can carry out game
+                        plays and move into virtual buildings for Play-to-Earn (Gamefi)</p>
+                </div>
+            </div>
+            <div class="about_card card_buildings parallax_container">
+                <img class="parallax_image" src="images/about04.png">
+                <div class="about_contents">
+                    <h2>Buildings</h2>
+                    <p>Move into AiR by owning virtual buildings as NFTs to build your presence and unique experience
+                        for exposure, engagement, loyalty, or simply just for FUN.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about_peak">
+    </div>
+</section>
+<section class="eco_section">
+    <figure><img src="images/eco_image.png"></figure>
+</section>
+<section id="roadmap" class="roadmap_section">
+    <div class="max_width">
+        <div class="roadmap_title">
+            <h1>ROADMAP</h1>
+            <p>AiR is a constantly and rapidly evolving Metaverse. Everyday there might be something new, be it new game
+                play, new digital assets to earn, or new partners building presence in AiR. There would be something
+                that can excite you sooner or later!</p>
+            <div class="roadmapbg">
+                <img src="images/roadmap_bg.png" ;>
+            </div>
+        </div>
+        <div class="roadmap_list">
+            <div class="roadmap_item roadmap_completed">
+                <div class="roadmap_number">01</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Prototype development</h2>
+                        <p>Location based gamification mobile app first prototype completed</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item roadmap_completed">
+                <div class="roadmap_number">02</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>O2O gamification implementation</h2>
+                        <p>Online/offline gateways to connect into the AiR Metaverse</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item roadmap_completed">
+                <div class="roadmap_number">03</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Welcome to AiR</h2>
+                        <p>AiR mobile app available in the app stores with trial Metaverse experience with selected
+                            partners</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item roadmap_progress">
+                <div class="roadmap_number">04</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Settler Program (Hong Kong)</h2>
+                        <p>A group of local brands, celebrities, and artists will be invited to own one of the 100
+                            available buildings (as Solana NFTs) and build unique adventures</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item roadmap_progress">
+                <div class="roadmap_number">05</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>NFT Gamification</h2>
+                        <p>NFT experience gamification for holders by making one of the hottest local Solana based NFTs
+                            in Hong Kong to carry out its story in AiR</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item roadmap_progress">
+                <div class="roadmap_number">06</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Battle in AiR</h2>
+                        <p>Time to arm up to battle location-based monsters and challenge epic bosses that carry
+                            valuable digital treasure by crafting weapons, cooking food, and leveling up skills</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item roadmap_progress">
+                <div class="roadmap_number">07</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Business Ecosystem</h2>
+                        <p>Creating O2O gateways into AiR for businesses and brands to gamify customer experience for
+                            engagement and conversion</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">08</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Decentralization</h2>
+                        <p>Connection to token wallets to bring NFTs into the Metaverse and store earned game items and
+                            digital assets</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">09</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>AiR Citizen NFT</h2>
+                        <p>Public minting of AiR Citizens as NFTs for game play and Play-to-Earn utility in the
+                            Metaverse</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">10</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Play-to-Earn seasons</h2>
+                        <p>Launching of game play to allow players compete with each other to complete seasonal missions
+                            to earn physical and digital rewards</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">11</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>AiR buildings NFT</h2>
+                        <p>Allocation of AiR buildings as NFTs for the public to purchase for customized experience and
+                            future Gamefi monetization</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">12</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>NFT Playground</h2>
+                        <p>A playground for NFTs to build game play and link to real world experience through the AiR
+                            O2O Metaverse</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">13</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Multiple Access</h2>
+                        <p>Accessing the AiR Metaverse through website, other digital touch points, and even VR devices,
+                            in addition to the mobile app</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">14</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Regional expansion</h2>
+                        <p>Expansion of the location-based Metaverse from Hong Kong to Asia Pacific and Southeast Asia
+                            to establish an international ecosystem</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">15</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>$AiR for Gamefi</h2>
+                        <p>Tokenized Metaverse currencies that enables Gamefi model through staking with AiR Citizens
+                            and AiR buildings with game play</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">16</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Metaverse customization</h2>
+                        <p>Tools for AiR Citizens and building owners to build their customized O2O Metaverse
+                            experiences and loyalty missions</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">17</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>Business loyalty economy</h2>
+                        <p>Establishment of an economy in the Metaverse to enable gamification and tokenization of
+                            business loyalty</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="roadmap_item">
+                <div class="roadmap_number">18</div>
+                <div class="roadmap_card">
+                    <div>
+                        <h2>AiR DAO</h2>
+                        <p>Empowering AiR building owners and Citizens to participate in decentralized decision making
+                            of the Metaverse such as future Buildings/Citizens NFT sales, partnership approval, and
+                            monetization policies</p>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="experience" class="why_section">
+    <div class="max_width">
+        <h1>EXPERIENCE IN AiR</h1>
+    </div>
+    <div class="why_wrapper">
+        <div class="why_list">
+            <div class="why_card">
+                <p>To go to a shopping mall to defeat a digital dragon to win a rare NFT using a special digital weapon
+                    you earned by spending there</p>
+            </div>
+            <div class="why_card">
+                <p>To collect an apple virtual game card from a digital apple tree in the Metaverse near your physical
+                    home location and exchange the virtual apple for a real apple at a nearby market</p>
+            </div>
+            <div class="why_card">
+                <p>To order a meal at a fast-food chain and enter the virtual version of the restaurant in the Metaverse
+                    to battle burger thieves to have a chance to win a bag of free fries</p>
+            </div>
+            <div class="why_card">
+                <p>To take the same bus everyday and be rewards with a virtual weapon to arm you up on the Metaverse for
+                    the upcoming adventure</p>
+            </div>
+            <div class="why_card">
+                <p>To build a unique experience in the virtual building you own and rent it out to other players to earn
+                    tokens</p>
+            </div>
+            <div class="why_card">
+                <p>To collect a series of virtual game cards for visiting selected merchants to complete a mission that
+                    earns you NFTs</p>
+            </div>
+            <div class="why_card">
+                <p>To go into virtual battle for your idol and occupy virtual buildings to establish a kingdom of fans
+                    to demonstrate your loyalty</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="fun_section">
+    <div class="fun_kv parallax_container">
+        <img class="parallax_image" src="images/fun_bg.jpg"/>
+    </div>
+    <div class="max_width">
+        <h1>HOW IS AiR FUN?</h1>
+        <div class="fun_contents">
+            <p>In this generation of Metaverse, Play-to-Earn and NFT based game plays are merely standards, not
+                differentiations. What AiR wants to achieve is to turn the life of every player into an adventure that
+                is taking place across the virtual realm and the physical realm. Game plays do not just reside inside
+                the digital screen. The real world IS part of the game. AiR players can earn virtual items from real
+                world actions and take such items into the Metaverse, and vice versa, players can earn virtual items in
+                the Metaverse that can redeem corresponding physical rewards in the real world.<br><br>In AiR, you are
+                not controlling a virtual character to perform actions in a purely virtual world. You ARE the character
+                playing the biggest Role Playing Game that spans across reality and virtuality.</p>
+            <h2>This is AiR - The Adventure in Reality!</h2>
+        </div>
+    </div>
+</section>
+<section id="team" class="team_section">
+    <h1>THE TEAM</h1>
+    <div class="team_wrapper">
+        <div class="team_list">
+            <div class="team_member">
+                <figure><img src="images/member01.jpg"></figure>
+                <h4>The Crazy One</h4>
+                <h5>Mastermind</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member02.jpg"></figure>
+                <h4>Hodler</h4>
+                <h5>Executive Producer</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member011.jpg"></figure>
+                <h4>Gamer</h4>
+                <h5>Game Producer</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member04.jpg"></figure>
+                <h4>Terminator</h4>
+                <h5>Lead Game Developer</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member05.jpg"></figure>
+                <h4>Jinx</h4>
+                <h5>Game Developer</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member06.jpg"></figure>
+                <h4>70%</h4>
+                <h5>Game Developer</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member07.jpg"></figure>
+                <h4>Sidekick</h4>
+                <h5>Game Designer/ Coordinator</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member08.jpg"></figure>
+                <h4>Art Boy</h4>
+                <h5>Illustrator/ 3D modeler</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member09.jpg"></figure>
+                <h4>Handy Lady</h4>
+                <h5>3D modeler/ Animator</h5>
+            </div>
+            <div class="team_member">
+                <figure><img src="images/member010.jpg"></figure>
+                <h4>Chill</h4>
+                <h5>Lead Engineer</h5>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="partners_section">
+    <div class="max_width">
+        <h1>PARTNERS</h1>
+        <div class="logo_list">
+
+            <div class="logo logo_05"><img src="images/logo05.png"></div>
+            <div class="logo logo_06"><img src="images/logo06.png"></div>
+            <div class="logo logo_07"><img src="images/logo07.png"></div>
+            <div class="logo logo_08"><img src="images/logo08.png"></div>
+            <div class="logo logo_09"><img src="images/logo09.png"></div>
+            <div class="logo logo_10"><img src="images/logo10.png"></div>
+            <div class="logo logo_11"><img src="images/logo11.png"></div>
+        </div>
+        <div class="partners_description">
+            <p>AiR is inviting partners of all sectors and industries to build the unique O2O Metaverse ecosystem
+                together. Partnerships will be announced soon that includes brands, shopping malls, chain stores, theme
+                parks, celebrities, and different NFT collections. Together, this will be the biggest Adventure that
+                blurs the line between virtual and real. Everyone is welcome!</p>
+            <h3>STAY TUNED.</h3>
+        </div>
+    </div>
+</section>
+<section id="faq" class="faq_section">
+    <div class="max_width">
+        <h1>FAQ</h1>
+        <div class="faq_list">
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>Where is the metaverse today and where is it going?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">The vision of AiR is to become a full-fledged one-of-a-kind Metaverse with
+                        all its characteristics and functionality through step-by-step development, enhancement, and
+                        expansion.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>How is AiR different from other Metaverses?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">AiR is a unique O2O ecosystem in the form of a Metaverse that closely links
+                        to the real world to facilitate business gamification and turn your life into rewarding
+                        adventures.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>Is AiR also for people who do not enjoy location-based game play?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">AiR is a Metaverse where you will be working with different players to
+                        participate the different game plays it offers so no matter which way you play, you will be able
+                        to find ways to enjoy the game and contribute in the Metaverse for fun and rewards.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>Which blockchain is AiR built upon?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">AiR is running on the Solana chain at first and will enable multiple chains
+                        down the road.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>Is AiR available only in Hong Kong?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">Hong Kong is the first city to launch AiR to test the concepts and will
+                        eventually be available worldwide.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>How can I buy AiR Citizens and Buildings?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">AiR Citizens will be available for public minting as NFT collections while
+                        AiR Buildings will hold occasional public sales with limited supply each time.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>What are the benefits for owning AiR Citizens and Buildings?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">Owning Citizens and Buildings will allow you to participate in the different
+                        game plays and Gamefi models to enable Play-to-Earn or as part of different gamified loyalty
+                        programs.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>How many AiR Citizens and Buildings will be there?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">While there will be a limited allocation of 10,000 Buildings in Hong Kong,
+                        there will be different collections of AiR Citizens, whether it is from AiR as original
+                        characters or from a third party NFT collection.
+                    </div>
+                </div>
+            </div>
+            <div class="faq_card">
+                <div class="faq_title">
+                    <h2>What will be the tokenomics of the $AiR token?</h2>
+                    <div class="arrow"><img src="images/svg/caret-right-solid.svg"></div>
+                </div>
+                <div class="faq_contents">
+                    <div class="paragraph">As the target of AiR is to become an ecosystem with business activities and
+                        loyalty from the real world, the exact tokenomics and Gamefi rules will be designed
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="community" class="community_section">
+    <div class="max_width">
+        <h1>COMMUNITY</h1>
+        <div class="community_list">
+            <a href="https://www.instagram.com/airmetaverse/" target="_blank" class="community_card ig button_enlarge">
+                <span><img src="images/svg/instagram_logo.svg"></span>Follow Instagram
+            </a>
+            <a href="https://discord.gg/VP9tHr8EG4" target="_blank" class="community_card discord button_enlarge">
+                <span><img src="images/svg/discord-brands.svg"></span>Join Discord
+            </a>
+            <a href="https://twitter.com/AiRMetaverse" target="_blank" class="community_card twitter button_enlarge">
+                <span><img src="images/svg/twitter-brands.svg"></span>Follow Twitter
+            </a>
+
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer_bg"><img src="images/air_section_bg.png"></div>
+    <div class="footer_wrapper">
+        <h1>GET READY?</h1>
+        <div class="app_list">
+            <a href="cdn-cgi/l/email-protection.html#baddd7fadbd3c897cdd5c8d6de94d3d5">
+                <div class="app_card button_enlarge"><span class="__cf_email__"
+                                                           data-cfemail="30575d705159421d475f425c541e595f">[email&#160;protected]</span>
+                </div>
+            </a>
+        </div>
+
+        <small>©2022 ALL RIGHTS RESERVED</small>
+    </div>
+</footer>
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script> Splitting(); </script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
